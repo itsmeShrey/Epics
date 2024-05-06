@@ -7,6 +7,7 @@ import Search from './SearchBar';
 import './SearchBar.css';
 import TextField from "@mui/material/TextField";
 import { SearchProvider,useSearch } from './searchContext';
+import { Link as LinkRoll, Button } from 'react-scroll';
 import { List } from "@mui/material";
 
 function App() { 
@@ -238,6 +239,10 @@ function App() {
     ];
     const filteredDetail = detail.filter(item => item.name.includes(searchtext));
     console.log(filteredDetail);
+    const handleClick = () => {
+        // Redirect to Page 2
+        window.location.href = 'https://epics1.vercel.app/';
+    };
     // const [searchData, setSearchData] = useState("");
 
     // // Function to handle search
@@ -254,6 +259,7 @@ function App() {
     return ( 
         <div className="ui container" >
             <Header />
+            <button onClick={handleClick}>Random Button</button>
             <Search />
             <Info detail={filteredDetail} />
         </div >
