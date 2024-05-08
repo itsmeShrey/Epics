@@ -258,8 +258,10 @@ function App() {
     //detail={filteredDetail}
     return ( 
         <div className="ui container" >
-            <button style={{ margin: '10px', padding: '10px', backgroundColor: "white",borderRadius: "10px" , cursor: "pointer"}} onClick={handleClick}>Home</button>
+        <div style = {{ display: "flex" }} >
+            <button style={{ margin: '25px', padding: '10px', backgroundColor: "white",borderRadius: "10px" , cursor: "pointer",height: "60px", width: "70px"}} onClick={handleClick}>Home</button>
             <Header />
+        </div>
             
             <Search />
             <Info detail={filteredDetail} />
